@@ -1,0 +1,3 @@
+
+Namespace 'Electron.CrossProcessExports' has no exported ...https://stackoverflow.com › questions › namespace-elec...
+11 Nov 2021 — Go to the node_modules/ngx-electron/lib/electron.service.d.ts and comment the line -> readonly remote: Electron.Remote;.

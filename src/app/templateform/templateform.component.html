@@ -1,0 +1,15 @@
+<form #myForm="ngForm" (ngSubmit)="submit(myForm)">
+    <div class="form-control">
+        <label for="email">E-Mail</label>
+        <input #emailco="ngModel" type="email" name="emailcontrol" appValidator [(ngModel)]="emailcontrol" required email minlength="6">
+        <pre *ngIf="emailco.dirty && emailco.errors">emailcontrol: {{ emailco.errors | json }}</pre>
+    </div>
+<button class="btn btn-primary submit" id="submitme" type="submit">submit</button>
+<button class="btn btn-secondary reset" type="reset" (click)="resetForm(myForm)">reset</button>
+</form>
+<h3>VS: {{emailcontrol}}</h3>
+
+<pre >myForm: {{ myForm?.value | json }}</pre>
+
+ 
+<!-- <app-error></app-error> -->

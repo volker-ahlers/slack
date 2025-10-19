@@ -1,0 +1,12 @@
+<h1 appElemchanger="#fef" #hello><div>sasas</div>{{test | async}}</h1>
+<hr>
+<div>One {{one | async}}</div>
+<div>Two {{two | async}}</div>
+<hr>
+<h3 appElemchanger color *ngFor="let x of one |async">{{x}}</h3>
+<hr>
+<!-- <h5 *ngFor="let x of two |async">{{x}}</h5> -->
+<button #button (click)="click()"></button>
+<input #text type="text"/>
+<app-test></app-test>
+<app-error></app-error>

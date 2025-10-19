@@ -1,0 +1,21 @@
+<div style="text-align: center;">
+    <h1>
+      Take Screenshots
+    </h1>
+    <button (click)="takeScreenshot()">
+      Take it!
+    </button>
+    <button (click)="displaySources()">
+      Sources
+    </button>
+    
+  </div>
+  <ul>
+    <li *ngFor="let source of sources">
+      <a (click)="selectSource(source)">
+        {{ source.name }}
+      </a>
+    </li>
+  </ul>
+  
+  <video autoplay width="640" height="480" #videoElement></video>

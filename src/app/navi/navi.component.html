@@ -1,0 +1,37 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="(isHandset$ | async) === false">
+    <mat-toolbar>Menu</mat-toolbar>
+    <mat-nav-list>
+      <a mat-list-item routerLink="/">Home</a>
+      <a mat-list-item routerLink="/comp">comp</a>
+      <a mat-list-item routerLink="/templateform">templateform</a>
+      <a mat-list-item routerLink="electron">electron</a>
+      <a mat-list-item routerLink="moduling">module</a>
+      <a mat-list-item routerLink="table">Dynamische Tabelle</a>
+      <a mat-list-item routerLink="servicetest">servicetest</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <span>Testing</span>
+    </mat-toolbar>
+    <!-- <app-comp></app-comp> -->
+<!-- <app-test></app-test>  -->
+<!-- <app-electron></app-electron> -->
+<!-- <app-templateform></app-templateform> -->
+
+
+<router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

@@ -1,0 +1,6 @@
+
+
+<div *ngIf="errormessage | async as errormessage ; else error"><div >{{ errormessage }}</div></div>
+
+<ng-template #error><p>wait</p></ng-template>
+
