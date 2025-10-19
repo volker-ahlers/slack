@@ -15,7 +15,7 @@ const {app, BrowserWindow} = require('electron')
 
       mainWindow.loadURL(
         url.format({
-          pathname: path.join(__dirname, `/dist/electron/index.html`),
+          pathname: path.join(__dirname, `/dist/angularngrx/index.html`),
           protocol: "file:",
           slashes: true
         })
