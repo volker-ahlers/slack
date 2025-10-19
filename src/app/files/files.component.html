@@ -1,0 +1,20 @@
+<div class="container">
+
+    <h2>Editor</h2>
+
+    <div class="row">
+        <div class="col-8">
+            <pre #editor contenteditable>{{ files | async | json }}</pre>
+        </div>
+
+        <div class="col-4">
+            <button (click)="setFileName('folders_yaml.json')">folder</button>
+            <button (click)="setFileName('online_yaml.json')">online</button>
+        </div>
+        <button (click)="save()">save</button>
+    </div>
+
+    <hr/>
+    <h6>text to send</h6>
+    {{ texttosend }}
+</div>
